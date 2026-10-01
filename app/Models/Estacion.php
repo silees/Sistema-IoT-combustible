@@ -17,6 +17,13 @@ class Estacion extends Model
         'ubicacion',
         'capacidad_maxima_litros',
         'token_api',
+        'umbral_critico',
+        'umbral_bajo',
+        'umbral_alto',
+        'ultima_alerta_enviada_at',
+    ];
+    protected $casts = [
+        'ultima_alerta_enviada_at' => 'datetime', // <-- Recomendado para trabajar con Carbon/now()
     ];
 
     public function lecturas()
